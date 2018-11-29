@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "outDir": "./bin",
+      "rootDir": "./src",
+      "sourceMap": false,
+      "module": "commonjs",
+      "target": "es6",
+      "experimentalDecorators": true
+  },
+  "exclude": [
+    "__test__/**"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@tn/baithuocnam.service",
+  "version": "1.0.0",
+  "description": "bai thuoc nam service",
+  "main": "./bin/index.js",
+  "scripts": {
+    "start": "node ./bin/index.js",
+    "start-ts": "ts-node ./src/index.ts",
+    "b": "npm run clean && npm run swagger && tsc",
+    "swagger": "tsoa swagger && tsoa routes",
+    "clean": "vnrm bin",
+    "lint": "tslint ./src/**/*.ts",
+    "copy-swagger": "ncp ./swagger-ui ./bin/swagger-ui",
+    "test": "mocha -r ts-node/register ./src/tests/index.ts"
+  },
+  "author": "Tinh Ngo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "inversify": "^4.11.1",
+    "inversify-binding-decorators": "^3.2.0",
+    "method-override": "^3.0.0",
+    "reflect-metadata": "^0.1.12",
+    "swagger-ui-express": "^4.0.1",
+    "tsoa": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/method-override": "0.0.31",
+    "ncp": "^2.0.0",
+    "typescript": "^3.1.6",
+    "vnrm": "^0.0.11"
+  }
+}
