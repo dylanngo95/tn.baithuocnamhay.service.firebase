@@ -5,7 +5,6 @@
   "main": "./bin/index.js",
   "scripts": {
     "start": "node ./bin/index.js",
-    "start-ts": "ts-node ./src/index.ts",
     "b": "npm run clean && npm run swagger && tsc",
     "swagger": "tsoa swagger && tsoa routes",
     "clean": "vnrm bin",
