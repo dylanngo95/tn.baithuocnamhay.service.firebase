@@ -1,8 +1,8 @@
 {
-  "name": "@tn/baithuocnam.service",
-  "version": "1.0.0",
+  "name": "@tn/baithuocnamhay.service",
+  "version": "0.0.1",
   "description": "BaiThuocNamHayService",
-  "main": "./bin/index.js",
+  "main": "./bin/src/index.js",
   "scripts": {
     "start": "yarn start:prod",
     "start:prod": "yarn env:prod node ./bin/src/index.js",
