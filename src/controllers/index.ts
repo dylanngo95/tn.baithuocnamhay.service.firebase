@@ -1,1 +1,3 @@
-import './UserController';
+export * from './ContentController';
+export * from './CategoryController';
+export * from './TagController';

@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
       "outDir": "./bin",
-      "rootDir": "./src",
+      "rootDirs": [
+        "./src",
+        "./build"
+      ],
       "sourceMap": false,
       "module": "commonjs",
       "target": "es6",
