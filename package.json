@@ -4,7 +4,7 @@
   "description": "BaiThuocNamHayService",
   "main": "./bin/src/index.js",
   "scripts": {
-    "start": "yarn start:prod",
+    "start": "yarn start:dev",
     "start:prod": "yarn env:prod node ./bin/src/index.js",
     "start:dev": "yarn build:tsoa && yarn env:dev ts-node-dev --respawn ./src",
     "build": "yarn build:tsoa && tsc && yarn copy:swagger",
