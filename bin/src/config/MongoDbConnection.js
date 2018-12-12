@@ -12,12 +12,12 @@ const ioc_1 = require("../inversify/ioc");
 const Constants_1 = require("./Constants");
 let MongoDbConnection = MongoDbConnection_1 = class MongoDbConnection {
     constructor() {
-        this.connectionString = Constants_1.default.config.mongoConnectionString;
+        this.connectionString = Constants_1.Constants.config.mongoConnectionString;
         this.db = mongoose.createConnection(this.connectionString, {
             useNewUrlParser: true,
             auth: {
-                user: Constants_1.default.config.userName,
-                password: Constants_1.default.config.password
+                user: Constants_1.Constants.config.userName,
+                password: Constants_1.Constants.config.password
             }
         });
     }

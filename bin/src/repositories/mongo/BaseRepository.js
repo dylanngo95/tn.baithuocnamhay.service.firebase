@@ -37,7 +37,7 @@ class BaseRepository {
                 return Promise.resolve(new this.formatter(doc));
             }
             else {
-                throw new ErrorHandler_1.ApiError(Constants_1.default.errorTypes.notFound);
+                throw new ErrorHandler_1.ApiError(Constants_1.Constants.errorTypes.notFound);
             }
         });
     }
@@ -66,7 +66,7 @@ class BaseRepository {
         return __awaiter(this, void 0, void 0, function* () {
             const document = yield this.documentModel.findOne(query);
             if (!document)
-                throw new ErrorHandler_1.ApiError(Constants_1.default.errorTypes.notFound);
+                throw new ErrorHandler_1.ApiError(Constants_1.Constants.errorTypes.notFound);
             return new this.formatter(document);
         });
     }

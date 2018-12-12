@@ -39,6 +39,6 @@ class Logger {
         return JSON.stringify(args, null, 4);
     }
 }
-Logger.shouldLog = constants_1.default.config.environment !== 'test';
+Logger.shouldLog = constants_1.Constants.config.environment !== 'test';
 Logger.console = logger;
 exports.Logger = Logger;

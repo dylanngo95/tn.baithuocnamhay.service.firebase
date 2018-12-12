@@ -2,7 +2,7 @@ import { MongoDbConnection } from '../../config/MongoDbConnection';
 import { Model, Document, Schema, SchemaDefinition, Mongoose } from 'mongoose';
 import { cleanQuery } from '../../utils/generalUtils';
 import { ApiError } from '../../config/ErrorHandler';
-import Const from '../../config/Constants';
+import { Constants } from '../../config/Constants';
 import { decorate, injectable } from 'inversify';
 import { IBaseRepository } from '../base/IBaseRepository';
 
@@ -32,7 +32,7 @@ export abstract class BaseRepository<EntityType> implements IBaseRepository<Enti
     if (doc) {
       return Promise.resolve(new this.formatter(doc));
     } else {
-      throw new ApiError(Const.errorTypes.notFound);
+      throw new ApiError(Constants.errorTypes.notFound);
     }
   }
 
@@ -63,7 +63,7 @@ export abstract class BaseRepository<EntityType> implements IBaseRepository<Enti
 
   public async findOne<T>(query: any): Promise<EntityType> {
     const document: Document = await this.documentModel.findOne(query);
-    if (!document) throw new ApiError(Const.errorTypes.notFound);
+    if (!document) throw new ApiError(Constants.errorTypes.notFound);
     return new this.formatter(document);
   }
 

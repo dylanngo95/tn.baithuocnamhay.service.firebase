@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 import { ProvideSingleton } from '../inversify/ioc';
-import Constants from './Constants';
+import { Constants } from './Constants';
 
 @ProvideSingleton(MongoDbConnection)
 export class MongoDbConnection {

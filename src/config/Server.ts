@@ -7,7 +7,7 @@ import { ErrorHandler } from './ErrorHandler';
 import { RegisterRoutes } from '../../build/routes';
 import { Logger } from './Logger';
 import '../controllers';
-import Constants from './Constants';
+import { Constants } from './Constants';
 
 export class Server {
   public app: express.Express = express();

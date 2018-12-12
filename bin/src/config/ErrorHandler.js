@@ -23,12 +23,12 @@ class ErrorHandler {
     }
     static normalizeError(error) {
         const normalizedError = new ApiError(error);
-        Object.keys(Constants_1.default.errorMap).forEach(errorKey => {
+        Object.keys(Constants_1.Constants.errorMap).forEach(errorKey => {
             if (errorKey === normalizedError.name)
-                Object.assign(normalizedError, Constants_1.default.errorMap[errorKey]);
+                Object.assign(normalizedError, Constants_1.Constants.errorMap[errorKey]);
         });
-        Object.keys(Constants_1.default.errorTypes).forEach(errorTypeKey => {
-            const errorType = Constants_1.default.errorTypes[errorTypeKey];
+        Object.keys(Constants_1.Constants.errorTypes).forEach(errorTypeKey => {
+            const errorType = Constants_1.Constants.errorTypes[errorTypeKey];
             if (errorType.statusCode === normalizedError.statusCode)
                 normalizedError.name = errorType.name;
         });

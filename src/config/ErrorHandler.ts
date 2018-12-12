@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import Const from './Constants';
+import { Constants } from './Constants';
 import { Logger } from './Logger';
 
 export interface ErrorType {
@@ -39,11 +39,11 @@ export class ErrorHandler {
 
   private static normalizeError(error: ApiError): ApiError {
     const normalizedError: ApiError = new ApiError(error);
-    Object.keys(Const.errorMap).forEach(errorKey => {
-      if (errorKey === normalizedError.name) Object.assign(normalizedError, Const.errorMap[errorKey]);
+    Object.keys(Constants.errorMap).forEach(errorKey => {
+      if (errorKey === normalizedError.name) Object.assign(normalizedError, Constants.errorMap[errorKey]);
     });
-    Object.keys(Const.errorTypes).forEach(errorTypeKey => {
-      const errorType = Const.errorTypes[errorTypeKey];
+    Object.keys(Constants.errorTypes).forEach(errorTypeKey => {
+      const errorType = Constants.errorTypes[errorTypeKey];
       if (errorType.statusCode === normalizedError.statusCode) normalizedError.name = errorType.name;
     });
     return normalizedError;

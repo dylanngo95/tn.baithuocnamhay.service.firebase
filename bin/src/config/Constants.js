@@ -19,7 +19,7 @@ const errorTypes = {
     notFound: { statusCode: 404, name: 'Not Found', message: 'content not found' },
     entity: { statusCode: 422, name: 'Unprocessable Entity', message: 'entity error' }
 };
-exports.default = {
+exports.Constants = {
     config: Config,
     errorTypes: errorTypes,
     get errorMap() {

@@ -1,6 +1,5 @@
-import constants from './constants';
 import * as logger from 'winston';
-import Constants from './constants';
+import { Constants } from './constants';
 
 const date = new Date();
 const fileName = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}.log`;

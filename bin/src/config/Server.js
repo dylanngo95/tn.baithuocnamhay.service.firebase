@@ -20,7 +20,7 @@ const Constants_1 = require("./Constants");
 class Server {
     constructor() {
         this.app = express();
-        this.port = Constants_1.default.config.port;
+        this.port = Constants_1.Constants.config.port;
         this.app.use(this.allowCors);
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(bodyParser.json());
@@ -35,7 +35,7 @@ class Server {
             process.on('uncaughtException', this.criticalErrorHandler);
             process.on('unhandledRejection', this.criticalErrorHandler);
             const listen = this.app.listen(this.port);
-            Logger_1.Logger.info(`Server running environment: ${Constants_1.default.config.environment} and port: ${this.port}`);
+            Logger_1.Logger.info(`Server running environment: ${Constants_1.Constants.config.environment} and port: ${this.port}`);
             Logger_1.Logger.info(`Go to http://localhost:${this.port}`);
             return listen;
         });

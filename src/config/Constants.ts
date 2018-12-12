@@ -21,7 +21,7 @@ const errorTypes = {
   entity: { statusCode: 422, name: 'Unprocessable Entity', message: 'entity error' }
 };
 
-export default {
+export const Constants = {
   config: Config,
   errorTypes: errorTypes,
   get errorMap() {

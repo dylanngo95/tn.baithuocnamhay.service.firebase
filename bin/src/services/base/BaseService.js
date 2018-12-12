@@ -63,7 +63,7 @@ class BaseService {
         return __awaiter(this, void 0, void 0, function* () {
             const res = yield this.repository.delete(id);
             if (!res.n)
-                throw new ErrorHandler_1.ApiError(Constants_1.default.errorTypes.notFound);
+                throw new ErrorHandler_1.ApiError(Constants_1.Constants.errorTypes.notFound);
         });
     }
 }

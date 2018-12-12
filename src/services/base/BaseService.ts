@@ -1,6 +1,6 @@
 import { BaseRepository } from "../../repositories/mongo/BaseRepository";
 import { ApiError } from "../../config/ErrorHandler";
-import Constants from "../../config/Constants";
+import { Constants } from "../../config/Constants";
 import { decorate, injectable } from "inversify";
 import { PaginationModel } from "../../entities/index";
 

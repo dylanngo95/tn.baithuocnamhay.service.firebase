@@ -145,8 +145,8 @@
 		}
 	},
 	"info": {
-		"title": "@tn/baithuocnam.service",
-		"version": "1.0.0",
+		"title": "@tn/baithuocnamhay.service",
+		"version": "0.0.1",
 		"description": "BaiThuocNamHayService",
 		"license": {
 			"name": "MIT"
