@@ -13,13 +13,18 @@ const Constants_1 = require("./Constants");
 let MongoDbConnection = MongoDbConnection_1 = class MongoDbConnection {
     constructor() {
         this.connectionString = Constants_1.Constants.config.mongoConnectionString;
-        this.db = mongoose.createConnection(this.connectionString, {
-            useNewUrlParser: true,
-            auth: {
-                user: Constants_1.Constants.config.userName,
-                password: Constants_1.Constants.config.password
-            }
-        });
+        if (Constants_1.Constants.config.environment == 'production') {
+            this.db = mongoose.createConnection(this.connectionString, {
+                useNewUrlParser: true,
+                auth: {
+                    user: Constants_1.Constants.config.userName,
+                    password: Constants_1.Constants.config.password
+                }
+            });
+        }
+        else {
+            this.db = mongoose.createConnection(this.connectionString, { useNewUrlParser: true });
+        }
     }
 };
 MongoDbConnection = MongoDbConnection_1 = __decorate([

@@ -22,6 +22,15 @@ class Server {
         this.app = express();
         this.port = Constants_1.Constants.config.port;
         this.app.use(this.allowCors);
+        // this.app.use(cors({
+        //   origin: function (origin, callback) {
+        //     if (config.cors.indexOf(origin) !== -1) {
+        //       callback(null, true);
+        //     } else {
+        //       callback(new Error('Not allowed by CORS'));
+        //     }
+        //   }
+        // }));
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(bodyParser.json());
         this.app.use(morgan('dev', { skip: () => !Logger_1.Logger.shouldLog }));
@@ -34,9 +43,9 @@ class Server {
         return __awaiter(this, void 0, void 0, function* () {
             process.on('uncaughtException', this.criticalErrorHandler);
             process.on('unhandledRejection', this.criticalErrorHandler);
-            const listen = this.app.listen(this.port);
-            Logger_1.Logger.info(`Server running environment: ${Constants_1.Constants.config.environment} and port: ${this.port}`);
-            Logger_1.Logger.info(`Go to http://localhost:${this.port}`);
+            const listen = this.app.listen(port);
+            Logger_1.Logger.info(`Server running environment: ${Constants_1.Constants.config.environment} and port: ${port}`);
+            Logger_1.Logger.info(`Go to http://localhost:${port}`);
             return listen;
         });
     }
