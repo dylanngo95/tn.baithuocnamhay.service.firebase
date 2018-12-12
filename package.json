@@ -34,7 +34,8 @@
     "swagger-ui-express": "^4.0.1",
     "tsoa": "^2.3.0",
     "uuid": "^3.2.1",
-    "winston": "^3.0.0-rc4"
+    "winston": "^3.0.0-rc4",
+    "cross-env": "^5.1.4"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
@@ -42,7 +43,6 @@
     "@types/method-override": "0.0.31",
     "@types/mongoose": "^5.0.2",
     "@types/mongoose-unique-validator": "^1.0.1",
-    "cross-env": "^5.1.4",
     "ncp": "^2.0.0",
     "ts-node-dev": "^1.0.0-pre.31",
     "typescript": "^3.1.6",
