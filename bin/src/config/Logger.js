@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger = require("winston");
-const constants_1 = require("./constants");
+const Constants_1 = require("./Constants");
 const date = new Date();
 const fileName = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}.log`;
 logger.configure({
@@ -39,6 +39,6 @@ class Logger {
         return JSON.stringify(args, null, 4);
     }
 }
-Logger.shouldLog = constants_1.Constants.config.environment !== 'test';
+Logger.shouldLog = Constants_1.Constants.config.environment !== 'test';
 Logger.console = logger;
 exports.Logger = Logger;
